@@ -37,7 +37,7 @@ function adduser() {
         firstName: document.getElementById('firstNameId').value,
         lastName: document.getElementById('lastNameId').value,
         status: document.getElementById('statusId').value,
-        username: document.getElementById('usernameId').value,
+        userName: document.getElementById('usernameId').value,
         createdDate: document.getElementById('createdDateId').value,
         registrationNumber: document.getElementById('registrationNumberId').value
     }
