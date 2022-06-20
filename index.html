@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing Users</title>
+    <link rel="stylesheet" href="./assets/styles/global.css">
+</head>
+
+<body>
+    <div class="listing">
+        <table >
+            <tr>
+                <th>ID</th>
+                <th>Date de création</th>
+                <th>Etat</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Nom d'utilisateur</th>
+                <th>Matricule</th>
+                <th>Action</th>
+            </tr>
+            <tbody id="tBodyId">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="addUser">
+        <button type="button" onclick="showForm(true)" class="addUserBtn">Ajouter utilisateur</button>
+    </div>
+
+    <div class="addUserForm" id="addUserFormId">
+        <div class="formContent">
+            <i class="closeIcon bi bi-x" onclick="showForm(false)"></i>
+            <p class="formTitle">Ajout d'utilisateurs</p>
+            <div class="listInputs">
+                <div class="groupInput">
+                    <p>Nom</p>
+                    <input id="lastNameId" type="text" />
+                </div>
+                <div class="groupInput">
+                    <p>Prénom</p>
+                    <input id="firstNameId" type="text" />
+                </div>
+                <div class="groupInput">
+                    <p>Etat</p>
+                    <select id="statusId">
+                        <option hidden></option>
+                        <option value="En validation">En validation</option>
+                        <option value="Validé">Validé</option>
+                        <option value="Rejeté">Rejeté</option>
+                    </select>
+                </div>
+            </div>
+            <div class="listInputs">
+                <div class="groupInput">
+                    <p>Nom d'utilisateur</p>
+                    <input id="usernameId" type="text" />
+                </div>
+                <div class="groupInput">
+                    <p>Date de création</p>
+                    <input id="createdDateId" type="date" />
+                </div>
+            </div>
+            <div class="listInputs">
+                <div class="groupInput">
+                    <p>Matricule</p>
+                    <input id="registrationNumberId" type="text" />
+                </div>
+            </div>
+            <button class="addUserBtn" onclick="adduser()">Enregistrer</button>
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
